@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div>
+      <h1>Gerador de senhas</h1>
+
+      <button id="copy_password" onclick="copyPassword()">Copiar</button>
+      <span class="copy_message">Senha copiada!</span>
+      <form action="" onsubmit="generatePassword()">
+        <input type="text" name="password_output" id="password_output" readonly>
+
+        <input type="range" name="char_number_range" id="char_number_range" min="0" max="120" autocomplete="off" value="0" oninput="this.nextElementSibling.value = 'Numero de caracteres: '+this.value">
+        <output>Numero de caracteres: 0</output>
+
+        <button type="submit" id="generate_password">Gerar</button>
+      </form>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
